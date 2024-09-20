@@ -1,0 +1,10 @@
+@import '@app/common.scss';
+
+
+.v-table-container {
+  @extend .flex-vertical;
+
+  padding: 0.25rem;
+  margin: 0.25rem;
+  
+}

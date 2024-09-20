@@ -1,0 +1,68 @@
+@import '@app/common.scss';
+
+
+.v-search-container {
+  @extend .flex-vertical;
+  position: relative;
+
+  .v-search-input {    
+    border-radius: 0.25rem;
+    margin: 2px;
+
+    input {
+      width: clamp(40vw, 45vw, 50vw);
+      justify-content: flex-start;
+      text-wrap: nowrap;
+      color: var(--v-text-primary-invert);
+      background: var(--v-background-invert);
+      border-radius: 0.25rem;
+      padding: 8px;
+      outline: none;
+      border: 0px transparent;
+      line-height: 2;
+      font-size: 14px;
+    }
+  }
+
+  .v-input-focus {
+    box-shadow: 0 0px 6px 2px var(--v-boxshadow);
+  }
+
+  .v-search-contexts {
+    @extend .flex-vertical;
+
+    position: absolute;
+    width: clamp(40vw, 45vw, 50vw);
+    top: 48px;
+    z-index: 20;
+    background-color: var(--v-container);
+    box-shadow: 0 4px 6px -4px var(--v-container-boxshadow);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0 2px;
+
+    .v-search-hints-elements {
+      @extend .flex-horizontal;
+
+      color: var(--v-text-primary-invert);
+      background: var(--v-background-invert);
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      margin: 0.25rem 0.5rem;
+
+      p {
+        font-weight: bold;
+        color: var(--v-text-primary-invert);
+      }
+    }
+
+    h4 {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: var(--v-text-primary);
+      padding-left: 0.25rem;
+      border-left: 3px solid var(--v-title-border);
+      margin: 0.5rem 0;
+    }
+  }
+}

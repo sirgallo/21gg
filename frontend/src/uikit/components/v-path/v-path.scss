@@ -1,0 +1,51 @@
+@import '@app/common.scss';
+
+
+.v-path {
+  @extend .flex-horizontal;
+  flex-grow: 1;
+
+  .v-path-nodes {
+    @extend .flex-horizontal;
+    overflow-x: auto;
+    border-radius: 0.25rem 0.25rem 0 0;
+
+    .v-node {
+      @extend .flex-vertical;
+
+      justify-content: flex-start;
+      overflow-y: auto;
+
+      .v-node-button {
+        @extend .flex-horizontal;
+        position: relative;
+
+        justify-content: flex-start;
+        align-items: center;
+        border-left: 2px solid var(--v-border);
+        background-color: inherit;
+        flex-grow: 1;
+        padding: 0.25rem 1rem;
+
+        &:hover {
+          background-color: var(--v-hover);
+          cursor: pointer;
+        }
+      
+        &:active {
+          background-color: var(--v-active);
+        }
+      }
+    }
+  }
+
+  .v-path-node-data {
+    @extend .flex-horizontal;
+
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.25 0.5rem;
+    margin: 0.25rem;
+    border-left: 2px solid (--v-border);
+  }
+}

@@ -1,0 +1,59 @@
+@import '@app/common.scss';
+
+
+.v-master-view {
+  @extend .flex-horizontal;
+
+  width: 100%;
+  
+  .v-master-view-keys {
+    @extend .flex-vertical;
+    
+    justify-content: flex-start;
+    align-items: flex-end;
+    overflow-y: auto;
+
+    .v-master-view-key {
+      @extend .flex-horizontal;
+
+      padding: 0.25rem 0.5rem;
+      margin: 0.25rem;
+      border-radius: 0.25rem;
+
+      &:hover {
+        box-shadow: 0 2px 4px var(--v-boxshadow);
+        cursor: pointer;
+      }
+    
+      &:active {
+        box-shadow: 0 4px 6px var(--v-boxshadow);
+      }
+
+      .v-master-view-key-slot {
+        z-index: 1;
+      }
+    }
+
+    .spinner {
+      padding: 0.5rem;
+      margin: 0.25rem;
+      font-size: 18px;
+      opacity: 0.5;
+    }
+  }
+
+  .v-master-view-data {
+    @extend .flex-vertical;
+    
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    min-height: 0;
+  }
+}
+
+.v-master-view-selection {
+  background-color: var(--v-boxshadow);
+  opacity: 0.5;
+  box-shadow: 0 0 4px var(--v-boxshadow);
+}

@@ -1,0 +1,16 @@
+@import '@app/assets/base.scss';
+
+
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+[v-cloak] {
+  display: none;
+}

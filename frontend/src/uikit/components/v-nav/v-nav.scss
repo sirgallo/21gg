@@ -1,0 +1,82 @@
+@import '@app/common.scss';
+
+
+.v-nav-container {
+  @extend .flex-horizontal;
+
+  max-height: fit-content;
+  width: 100%;
+  background-color: var(--v-nav);
+  box-shadow: 0 4px 6px -4px var(--v-boxshadow);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+
+  .v-nav-title {
+    @extend .flex-horizontal;
+
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+  
+  .v-nav-router {
+    @extend .flex-horizontal;
+
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 0.25rem;
+    padding: 0 0.5rem;
+
+    .v-nav-router-button {
+      @extend .flex-horizontal;
+
+      padding: 0.25rem;
+      align-items: center;
+      justify-content: space-around;
+      font-weight: bold;
+      border-radius: 0.25rem;
+      gap: 0.5rem;
+      color: var(--v-title-secondary);
+    
+      &:hover {
+        background-color: var(--v-hover);
+        cursor: pointer;
+      }
+    
+      &:active {
+        background-color: var(--v-active);
+      }
+    }
+
+    .v-nav-router-link {
+      @extend .flex-horizontal;
+
+      padding: 0.25rem 0.5rem;
+      align-items: center;
+      border-radius: 0.25rem;
+      gap: 0.25rem;
+      text-decoration: none;
+      color: var(--v-title-secondary);
+      font-weight: bold;
+
+      &:hover {
+        background-color: var(--v-hover);
+        cursor: pointer;
+      }
+    
+      &:active {
+        background-color: var(--v-active);
+      }
+    }
+  }
+
+  .v-nav-actions {
+    @extend .flex-horizontal;
+
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

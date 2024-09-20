@@ -1,0 +1,16 @@
+[package]
+name = "lib21gg"
+version = "0.1.0"
+description = "just for fun"
+edition = "2021"
+
+[dependencies]
+solana-program = "1.16.10"
+arrayref = "0.3.7"
+borsh = "0.9.3"
+borsh-derive = "0.9.1"
+rand = "0.8.4"
+
+[lib]
+name = "lib21gg"
+crate-type = ["cdylib", "lib"]
